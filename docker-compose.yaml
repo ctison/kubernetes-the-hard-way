@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  etcd:
+    build:
+      context: .
+      target: etcd
+
+  kube-apiserver:
+    build:
+      context: .
+      target: kube-apiserver
+
+  kube-controller-manager:
+    build:
+      context: .
+      target: kube-controller-manager
+
+  containerd:
+    build:
+      context: .
+      target: containerd
+
+  kubelet:
+    build:
+      context: .
+      target: kubelet
+
+  kube-proxy:
+    build:
+      context: .
+      target: kube-proxy
